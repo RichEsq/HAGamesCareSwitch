@@ -1,6 +1,6 @@
 [project]
 name = "gamescare-ha"
-version = "0.1.0"
+version = "0.2.0"
 description = "Home Assistant custom integration for the GamesCare RGB (SCART) Switch"
 readme = "README.md"
 license = { text = "MIT" }
