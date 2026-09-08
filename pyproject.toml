@@ -1,0 +1,86 @@
+[project]
+name = "gamescare-ha"
+version = "0.1.0"
+description = "Home Assistant custom integration for the GamesCare RGB (SCART) Switch"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.13"
+classifiers = ["Private :: Do Not Upload"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+src = ["custom_components", "tests"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  # Formatter conflicts
+  "COM812",
+  "ISC001",
+  "CPY001",  # copyright header not required
+  # Home Assistant conventions
+  "D203",    # one-blank-line-before-class (conflicts with D211)
+  "D213",    # multi-line-summary-second-line (conflicts with D212)
+  "D202",    # no blank lines after function docstring
+  "D406",    # section name ends with newline
+  "D407",    # dashed underline after section
+  "E501",    # line too long, handled by the formatter
+  "TRY003",  # long messages in exceptions
+  "EM101",   # string literal in exception
+  "EM102",   # f-string in exception
+  "TC001",   # move application import into TYPE_CHECKING block
+  "TC002",   # move third-party import into TYPE_CHECKING block
+  "TC003",   # move stdlib import into TYPE_CHECKING block
+  "PLR0913", # too many arguments
+  "ANN401",  # Any in signatures
+  "FBT003",  # boolean positional value in call
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+  "S101",    # assert
+  "SLF001",  # private member access
+  "PLR2004", # magic values
+  "D",       # docstrings not required in tests
+  "ANN",     # annotations relaxed in tests
+  "FBT",     # boolean args
+  "ARG",     # unused fixture args
+  "INP001",  # implicit namespace
+  "PT011",   # pytest.raises too broad
+]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+combine-as-imports = true
+known-first-party = ["custom_components.gamescare"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unreachable = true
+show_error_codes = true
+files = ["custom_components/gamescare"]
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = ["error::DeprecationWarning:custom_components.gamescare"]
+addopts = "-p no:cacheprovider"
