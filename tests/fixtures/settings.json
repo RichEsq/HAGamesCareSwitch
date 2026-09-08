@@ -1,0 +1,23 @@
+{
+  "mode": 2,
+  "language": 1,
+  "boards": 1,
+  "backlight": 1,
+  "address": "192.168.1.226",
+  "hostname": "gcswitch",
+  "version": "3.1.2",
+  "gbs_enabled": false,
+  "gbs_ip": "",
+  "retrotink_enabled": false,
+  "ossc_enabled": false,
+  "pixelfx_enabled": false,
+  "pixelfx_ip": "",
+  "pixelfx_pass_set": false,
+  "pixelfx_user": "morph4k",
+  "has_retrotink": false,
+  "has_ir": false,
+  "has_output_mode": true,
+  "has_expansion": true,
+  "theme_color": "#FBE108",
+  "ssid": "Ranche-IoT"
+}

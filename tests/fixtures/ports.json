@@ -1,0 +1,86 @@
+{
+  "ports": [
+    {
+      "title": "",
+      "playtime": 5,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 0,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 0,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 0,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 0,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 0,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 0,
+      "detected": false,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    },
+    {
+      "title": "",
+      "playtime": 1234,
+      "detected": true,
+      "outputmode": 0,
+      "gbs_slot": "",
+      "rt_profile": 0,
+      "ossc_profile": -1,
+      "pixelfx_preset": ""
+    }
+  ],
+  "active": 8,
+  "forced": 1
+}
