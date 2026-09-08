@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="512" height="512">
+  <!-- GamesCare circle mark, recreated as vector for the home-assistant/brands repo. -->
+  <defs>
+    <!-- One quadrant (top-right) with its circuit traces; the other three are rotations. -->
+    <g id="quadrant">
+      <path d="M 278 21 A 236 236 0 0 1 491 234 L 278 234 Z" fill="#A6DEDE"/>
+      <g fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="304,62 336,62 366,92 404,92"/>
+        <polyline points="296,132 344,132 382,170"/>
+        <polyline points="424,138 424,186 452,214"/>
+        <polyline points="332,204 374,204"/>
+      </g>
+      <g fill="#FFFFFF">
+        <circle cx="304" cy="62" r="6"/>
+        <circle cx="404" cy="92" r="6"/>
+        <circle cx="296" cy="132" r="6"/>
+        <circle cx="382" cy="170" r="6"/>
+        <circle cx="424" cy="138" r="6"/>
+        <circle cx="452" cy="214" r="6"/>
+        <circle cx="332" cy="204" r="6"/>
+        <circle cx="374" cy="204" r="6"/>
+        <circle cx="436" cy="112" r="6"/>
+      </g>
+    </g>
+    <polygon id="arrow" points="256,112 226,158 286,158" fill="#E8903A"/>
+  </defs>
+
+  <use xlink:href="#quadrant"/>
+  <use xlink:href="#quadrant" transform="rotate(90 256 256)"/>
+  <use xlink:href="#quadrant" transform="rotate(180 256 256)"/>
+  <use xlink:href="#quadrant" transform="rotate(270 256 256)"/>
+
+  <circle cx="256" cy="256" r="54" fill="#7FCFCF"/>
+
+  <use xlink:href="#arrow"/>
+  <use xlink:href="#arrow" transform="rotate(90 256 256)"/>
+  <use xlink:href="#arrow" transform="rotate(180 256 256)"/>
+  <use xlink:href="#arrow" transform="rotate(270 256 256)"/>
+</svg>

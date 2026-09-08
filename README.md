@@ -193,6 +193,25 @@ Assistant imports so it can be split into a standalone package later.
 Releases are cut by pushing a `vX.Y.Z` tag that matches `manifest.json`; the release workflow
 builds `gamescare.zip` and attaches it to the GitHub release for HACS.
 
+### Icon
+
+Home Assistant and HACS do not read icons from the integration itself. Both fetch them from
+the central [home-assistant/brands](https://github.com/home-assistant/brands) repository, so the
+icon only appears once it has been merged there. The assets are ready under `brands/gamescare/`:
+
+- `icon.svg` is the vector source (the GamesCare circle mark).
+- `icon.png` (256 x 256) and `icon@2x.png` (512 x 512) are rendered from it with a transparent
+  background, which is what brands requires.
+
+To submit: fork `home-assistant/brands`, copy `icon.png` and `icon@2x.png` into
+`custom_integrations/gamescare/`, and open a pull request. Until it is merged, Home Assistant
+shows a generic placeholder. To regenerate the PNGs after editing the SVG:
+
+```sh
+pip install cairosvg
+python -c "import cairosvg as c; c.svg2png(url='brands/gamescare/icon.svg', write_to='brands/gamescare/icon@2x.png', output_width=512, output_height=512); c.svg2png(url='brands/gamescare/icon.svg', write_to='brands/gamescare/icon.png', output_width=256, output_height=256)"
+```
+
 ## Licence
 
 [MIT](LICENSE)
