@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="512" height="512">
   <!-- GamesCare circle mark, recreated as vector for the home-assistant/brands repo. -->
   <defs>
-    <!-- One quadrant (top-right); the other three are rotations. Cross gap is 88 px wide. -->
-    <path id="quadrant" d="M 300 24.1 A 236 236 0 0 1 487.9 212 L 300 212 Z" fill="#A6DEDE"/>
-    <polygon id="arrow" points="256,104 220,156 292,156" fill="#E8903A"/>
+    <!-- One quadrant (top-right); the other three are rotations. Cross gap is 132 px wide. -->
+    <path id="quadrant" d="M 322 29.4 A 236 236 0 0 1 482.6 190 L 322 190 Z" fill="#A6DEDE"/>
+    <polygon id="arrow" points="256,112 231,148 281,148" fill="#E8903A"/>
   </defs>
 
   <use xlink:href="#quadrant"/>
