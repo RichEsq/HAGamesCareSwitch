@@ -1,0 +1,36 @@
+set_port_title:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: gamescare
+    port:
+      required: true
+      example: 3
+      selector:
+        number:
+          min: 1
+          max: 64
+          mode: box
+    title:
+      required: true
+      example: Saturn
+      selector:
+        text:
+
+reset_playtime:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: gamescare
+    port:
+      required: true
+      example: 3
+      selector:
+        number:
+          min: 1
+          max: 64
+          mode: box

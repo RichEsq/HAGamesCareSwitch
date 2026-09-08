@@ -1,0 +1,118 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to your GamesCare RGB Switch",
+        "description": "Enter the IP address or hostname of the switch. It must already be joined to your WiFi network in client mode.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP address or hostname, for example 192.168.1.226 or gcswitch.local"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_response": "The device answered, but not like a GamesCare RGB Switch",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "GamesCare RGB Switch options",
+        "data": {
+          "scan_interval": "Poll interval"
+        },
+        "data_description": {
+          "scan_interval": "How often to read the switch state, in seconds (5-300)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "auto_mode": {
+        "name": "Auto mode"
+      }
+    },
+    "button": {
+      "reboot": {
+        "name": "Reboot"
+      }
+    },
+    "select": {
+      "input": {
+        "name": "Input"
+      }
+    },
+    "sensor": {
+      "active_port": {
+        "name": "Active port"
+      }
+    },
+    "switch": {
+      "backlight": {
+        "name": "Backlight"
+      }
+    }
+  },
+  "services": {
+    "set_port_title": {
+      "name": "Set port title",
+      "description": "Sets the display name of an input port (max 16 characters).",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "The GamesCare RGB Switch to update."
+        },
+        "port": {
+          "name": "Port",
+          "description": "The 1-based port number."
+        },
+        "title": {
+          "name": "Title",
+          "description": "New title for the port. Use an empty string to clear it."
+        }
+      }
+    },
+    "reset_playtime": {
+      "name": "Reset playtime",
+      "description": "Resets the accumulated playtime counter of an input port to zero.",
+      "fields": {
+        "device_id": {
+          "name": "Device",
+          "description": "The GamesCare RGB Switch to update."
+        },
+        "port": {
+          "name": "Port",
+          "description": "The 1-based port number."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Could not reach the GamesCare RGB Switch at {host}: {error}"
+    },
+    "invalid_response": {
+      "message": "Unexpected response from the GamesCare RGB Switch at {host}: {error}"
+    },
+    "invalid_option": {
+      "message": "{option} is not a valid input option"
+    },
+    "device_not_found": {
+      "message": "Device {device_id} is not a GamesCare RGB Switch"
+    },
+    "entry_not_loaded": {
+      "message": "The GamesCare RGB Switch for device {device_id} is not loaded"
+    },
+    "invalid_port": {
+      "message": "Port {port} is out of range; this switch has {count} ports"
+    }
+  }
+}
