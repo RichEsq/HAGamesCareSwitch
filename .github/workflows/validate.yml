@@ -24,6 +24,7 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
-          # "brands" needs a PR to home-assistant/brands; "topics" and
-          # "description" are repository settings, not repository content.
+          # "brands" checks the central brands repo, which no longer accepts
+          # custom integrations (the icon ships in custom_components/gamescare/brand
+          # instead); "topics" and "description" are repository settings, not content.
           ignore: brands topics description
