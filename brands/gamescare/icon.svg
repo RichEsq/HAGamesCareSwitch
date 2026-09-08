@@ -3,7 +3,7 @@
   <defs>
     <!-- One quadrant (top-right); the other three are rotations. Cross gap is 132 px wide. -->
     <path id="quadrant" d="M 322 29.4 A 236 236 0 0 1 482.6 190 L 322 190 Z" fill="#A6DEDE"/>
-    <polygon id="arrow" points="256,112 231,148 281,148" fill="#E8903A"/>
+    <polygon id="arrow" points="256,122 231,158 281,158" fill="#E8903A"/>
   </defs>
 
   <use xlink:href="#quadrant"/>
